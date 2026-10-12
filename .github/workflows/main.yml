@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  echo-job:
+  my_job1:
     name: Run Echo Commands
     runs-on: ubuntu-latest
     
