@@ -9,13 +9,14 @@ on:
 jobs:
   my_job1:
     name: Run Echo Commands
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
-      - name: Step 1 - Basic Echo
-        run: echo "Hello! This is a simple GitHub Actions pipeline."
+      - name: Step 1 - Fase de test
+        run: echo "Test pasados corectamente"
 
-      - name: Step 2 - Echo Current Date
+      - name: Step 2 - Construyendo imagenes
         run: |
-          echo "The current date and time is:"
-          date
+          docker compose build
+      - name: Construyendo contenedores
+        run: docker compose up -d 
